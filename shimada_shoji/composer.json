@@ -1,0 +1,42 @@
+{
+    "description": "The CodeIgniter framework",
+    "name": "codeigniter/framework",
+    "type": "project",
+    "homepage": "https://codeigniter.com",
+    "license": "MIT",
+    "support": {
+        "forum": "http://forum.codeigniter.com/",
+        "wiki": "https://github.com/bcit-ci/CodeIgniter/wiki",
+        "slack": "https://codeigniterchat.slack.com",
+        "source": "https://github.com/bcit-ci/CodeIgniter"
+    },
+    "repositories": [{
+            "type": "path",
+            "url": "./vendor_local/csv/pdf-to-text"
+        },
+        {
+            "type": "path",
+            "url": "./vendor_local/csv/pdfmerger"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.7",
+        "smalot/pdfparser": "*",
+        "dompdf/dompdf": "^0.8.2",
+        "mpdf/mpdf": "^7.0",
+        "csv/pdf-to-text": "dev-master",
+        "csv/pdfmerger": "dev-master",
+        "phpoffice/phpspreadsheet": "^1.2",
+        "phpoffice/phpword": "v0.14.*"
+    },
+    "suggest": {
+        "paragonie/random_compat": "Provides better randomness in PHP 5.x"
+    },
+    "require-dev": {
+        "mikey179/vfsStream": "1.1.*",
+        "phpunit/phpunit": "4.* || 5.*"
+    },
+    "scripts": {
+        "post-update-cmd": "php load_font.php Arial font\\arial.ttf font\\arialbd.ttf font\\ariali.ttf font\\arialbi.ttf "
+    }
+}

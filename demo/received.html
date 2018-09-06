@@ -1,0 +1,559 @@
+﻿<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+	<title>受注入力画面</title>
+	<!-- BOOTSTRAP CORE STYLE  -->
+	<link href="assets/css/bootstrap.css" rel="stylesheet" />
+	<!-- DATETIME PICKER-->
+	<link href="assets/jquery-ui/jquery-ui.css" rel="stylesheet" />
+	<!--CUSTOM CSS-->
+	<link href="assets/css/customs/custom.css" rel="stylesheet" />
+	<!-- FONT AWESOME ICONS  -->
+	<link href="assets/css/font-awesome.css" rel="stylesheet" />
+	<!-- CUSTOM STYLE  -->
+	<link href="assets/css/style.css" rel="stylesheet" />
+	<!-- HTML5 Shiv and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+	<div class="navbar navbar-inverse set-radius-zero">
+		<div class="container">
+			<div class="navbar-header">
+				<a href="index.html">
+					<img src="assets/img/logo.png" style="margin: 10px 21px;" />
+				</a>
+			</div>
+			<button class="btn btn-warning" style="float:right; margin-top: 10px">Logout</button>
+			<input type="image" src="assets/img/jp.png" style="float:right; margin-top: 10px">
+			<input type="image" src="assets/img/vn.png" style="float:right; margin-top: 10px">
+			<input type="image" src="assets/img/us.png" style="float:right; margin-top: 10px">
+		</div>
+	</div>
+	<!-- LOGO HEADER END-->
+	<section class="menu-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="navbar-collapse collapse ">
+						<ul id="menu-top" class="nav navbar-nav navbar-left">
+							<li>
+								<a href="top.html">TOP</a>
+							</li>
+							<li>
+								<a class="menu-top-active" href="received.html">受注入力</a>
+							</li>
+							<li>
+								<a href="stock.html">在庫入力</a>
+							</li>
+							<li>
+								<a href="order.html">発注入力</a>
+							</li>
+							<li>
+								<a href="sale.html">販売入力</a>
+							</li>
+							<li>
+								<a href="delivery_order.html">出荷指図書</a>
+							</li>
+							<li>
+								<a href="packing_instruction.html">梱包指示</a>
+							</li>
+							<li>
+								<a href="packing_list.html">P/L</a>
+							</li>
+							<li class="dropdown-submenu">
+								<a tabindex="-1" href="#" data-toggle="dropdown">マスタ管理</a>
+								<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="background-color: #3D3D3D;">
+									<li>
+										<a tabindex="-1" href="product_master.html">商品マスタ</a>
+									</li>
+									<li>
+										<a tabindex="-1" href="business_partner_master.html">取引先マスタ</a>
+									</li>
+									<li>
+										<a tabindex="-1" href="user_master.html">ユーザマスタ</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!-- MENU SECTION END-->
+	<div class="content-wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 header-style">
+					<h4 class="page-head-line">受注入力</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<form class="form-horizontal">
+							<div class="form-group">
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="order_no">OrderNO</label>
+									<div class="col-sm-8 form-inp" style="padding-left: 20px;">
+										<input type="text" class="form-control" id="order_no" value="" disabled>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="order_date">OrderDate</label>
+									<div class="col-sm-6 form-inp2">
+										<input type="text" class="form-control" id="order_date" value="">
+									</div>
+									<label class="col-sm-1 form-required form-required2">*</label>
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="customer_po">CustomerPO</label>
+									<div class="col-sm-7 form-inp">
+										<input type="text" class="form-control" id="customer_po" value="">
+									</div>
+									<label class="col-sm-1 form-required">*</label>
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="salesman">Salesman</label>
+									<div class="col-sm-7 form-inp">
+										<select class="form-control" id="salesman">
+											<option>Ryosuke Sunahara</option>
+											<option>Sales man</option>
+										</select>
+									</div>
+									<label class="col-sm-1 form-required">*</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-6">
+									<label class="control-label col-sm-2 form-title" for="customer">Customer</label>
+									<div class="col-sm-9 form-inp">
+										<select class="form-control" id="customer">
+											<option>Japan Mart Company Limited</option>
+											<option>Phenix Co., Limited</option>
+										</select>
+									</div>
+									<label class="col-sm-1 form-required" style="text-align: left">*</label>
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="currency">Currency</label>
+									<div class="col-sm-7 form-inp">
+										<select class="form-control" id="currency">
+											<option>USD</option>
+											<option>VND</option>
+											<option>JPY</option>
+											<option>EUR</option>
+										</select>
+									</div>
+									<label class="col-sm-1 form-required">*</label>
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="assistance">Assistance</label>
+									<div class="col-sm-7 form-inp">
+										<select class="form-control" id="assistance">
+											<option>Anna Wong</option>
+											<option>Assistance</option>
+										</select>
+									</div>
+									<label class="col-sm-1 form-required">*</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-6">
+									<label class="control-label col-sm-2 form-title" for="delivery_to">Delivery To</label>
+									<div class="col-sm-9 form-inp">
+										<select class="form-control" id="delivery_to">
+											<option>Japan Mart Company Limited</option>
+											<option>Phenix Co., Limited</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="payment">Payment</label>
+									<div class="col-sm-7 form-inp">
+										<select class="form-control" id="payment">
+											<option>AMS 30 days</option>
+											<option>AMS 30 days</option>
+										</select>
+									</div>
+									<label class="col-sm-1 form-required">*</label>
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="manager">Manager</label>
+									<div class="col-sm-7 form-inp">
+										<select class="form-control" id="manager">
+											<option>Ryosuke Sunahara</option>
+											<option>Manager</option>
+										</select>
+									</div>
+									<label class="col-sm-1 form-required">*</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-6">
+									<label class="control-label col-sm-2 form-title" for="delivery_address">DeliveryAddress</label>
+									<div class="col-sm-9 form-inp">
+										<input type="text" class="form-control" id="delivery_address" value="1-14-6. Uchikanda. Chiyoda-Ku. Tokyo 101-0047. Japan.">
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="apparel">Apparel</label>
+									<div class="col-sm-7 form-inp">
+										<select class="form-control" id="apparel">
+											<option>PHENIX</option>
+											<option>Apparel</option>
+										</select>
+									</div>
+									<label class="col-sm-1 form-required">*</label>
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="attention">Attention</label>
+									<div class="col-sm-7 form-inp">
+										<input type="text" class="form-control" id="attention" value="">
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-6">
+									<label class="control-label col-sm-2 form-title" for="memo">Memo</label>
+									<div class="col-sm-9 form-inp">
+										<textarea class="form-control form-rounded" rows="2" id="memo"></textarea>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="col-sm-12" style="margin-top: 5px;"></div>
+									<label class="control-label col-sm-4 form-title" for="delivery_date">Delivery Date</label>
+									<div class="col-sm-7 form-inp">
+										<input type="text" class="form-control" id="delivery_date" value="2017/07/22">
+									</div>
+									<label class="col-sm-1 form-required">*</label>
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="bom_order">BOM Order</label>
+									<div class="col-sm-7 form-inp">
+										<input type="checkbox" class="checkbox-inline" id="bom_order" value="">
+									</div>
+									<div class="col-sm-12" style="margin-top: 5px;"></div>
+									<label class="control-label col-sm-4 form-title" for="sales_zero">SalesZero</label>
+									<div class="col-sm-7 form-inp">
+										<input type="checkbox" class="checkbox-inline" id="sales_zero" value="">
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-6">
+									<label class="control-label col-sm-2 form-title" for="bank">Bank</label>
+									<div class="col-sm-9 form-inp">
+										<select class="form-control" id="bank">
+											<option>MIZUHO-USD</option>
+											<option>Bank</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="edit_user">EditUser</label>
+									<div class="col-sm-7 form-inp">
+										<input type="text" class="form-control" id="edit_user" value="1021" disabled>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="check_user">CheckUser</label>
+									<div class="col-sm-7 form-inp">
+										<input type="email" class="form-control" id="check_user" value="1021" disabled>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="create_user">CreateUser</label>
+									<div class="col-sm-7 form-inp" style="padding-left: 20px;">
+										<input type="text" class="form-control" id="create_user" value="1021" disabled>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="create_date">CreateDate</label>
+									<div class="col-sm-6 form-inp2">
+										<input type="text" class="form-control" id="create_date" value="2017/07/19 16:31" style="padding-right: 0px;" disabled>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="edit_date">EditDate</label>
+									<div class="col-sm-7 form-inp">
+										<input type="text" class="form-control" id="edit_date" value="2017/07/19 16:33" disabled>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="check_date">CheckDate</label>
+									<div class="col-sm-7 form-inp">
+										<input type="email" class="form-control" id="check_date" value="2017/07/19 16:33" disabled>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12 panel-button">
+									<div class="pull-right">
+										<Button type="button" class="btn btn-success btn-custom" onclick="refreshInput()">New</Button>
+										<Button type="button" class="btn btn-info btn-custom">Edit</Button>
+										<Button type="button" class="btn btn-primary btn-custom" onclick="window.location.href='received_2.html'">Save</Button>
+										<Button type="button" class="btn btn-danger btn-custom">Delete</Button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12 header-style">
+					<div class="row" style="margin: 5px 0px;">
+						<button class="btn btn-default pull-right" data-toggle="modal" data-target="#productList">Add</button>
+					</div>
+					<div class="table-responsive">
+						<table id="received_table" class="table table-fixed table-bordered table-striped">
+							<thead>
+								<tr style="background-color:rgba(0,0,0,.075);">
+									<td></td>
+									<th>ItemCode</th>
+									<th>ItemName</th>
+									<th>Customerparts</th>
+									<th>Size</th>
+									<th>Color</th>
+									<th>CustomerColor</th>
+									<th>Quantity</th>
+									<th>Order</th>
+									<th>Unit</th>
+									<th>Currency</th>
+									<th>Price</th>
+									<th>Amount</th>
+									<th>Stock City</th>
+									<th>add user</th>
+									<th>add time</th>
+									<th>instock</th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal -->
+	<div id="productList" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="container-fluid">
+						<form class="form-horizontal">
+							<div class="form-group">
+								<div class="col-sm-4">
+									<label class="control-label col-sm-4 form-title" for="item_code">Item code</label>
+									<div class="col-sm-8 form-inp">
+										<input type="text" class="form-control" id="item_code" value="VNBS001">
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<label class="control-label col-sm-4 form-title" for="item_name">Item name</label>
+									<div class="col-sm-8 form-inp">
+										<input type="text" class="form-control" id="item_name" value="Polyester button">
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<label class="control-label col-sm-4 form-title" for="composition">Composition</label>
+									<div class="col-sm-8 form-inp">
+										<input type="text" class="form-control" id="composition" value="Polyester">
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12 panel-button2">
+									<div class="pull-right">
+										<Button type="button" class="btn btn-primary btn-custom">Search</Button>
+									</div>
+								</div>
+							</div>
+						</form>
+						<div class="row">
+							<div class="col-md-12 header-style">
+								<div class="table-responsive">
+									<table id="listProduct" class="table table-fixed table-bordered table-striped">
+										<thead>
+											<tr style="background-color:rgba(0,0,0,.075);">
+												<th>Sales man</th>
+												<th style="min-width: 50px !important;">Keep</th>
+												<th>Customer</th>
+												<th>Apparel</th>
+												<th>Item code</th>
+												<th>Item Name</th>
+												<th>Vender Parts</th>
+												<th>Unit</th>
+												<th>Size</th>
+												<th>Color</th>
+												<th>Vender color</th>
+												<th>Quantity</th>
+												<th>Currency</th>
+												<th>Price</th>
+												<th>Amount</th>
+												<th>Edit User</th>
+												<th>Edit date</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Kaneda</td>
+												<td style="min-width: 50px !important;  text-align: center">
+													<input type="checkbox" disabled>
+												</td>
+												<td>Tokyo1</td>
+												<td>Mizuno</td>
+												<td>VNBS001</td>
+												<td>Polyester button</td>
+												<td>FS9128</td>
+												<td>pcs</td>
+												<td>15</td>
+												<td>White</td>
+												<td>01</td>
+												<td>3000</td>
+												<td>US$</td>
+												<td>0.015000</td>
+												<td>22.5</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>Free</td>
+												<td style="min-width: 50px !important;  text-align: center">
+													<input type="checkbox" checked disabled>
+												</td>
+												<td>Tokyo1</td>
+												<td>Puma</td>
+												<td>VNBS001</td>
+												<td>Polyester button</td>
+												<td>FS9128</td>
+												<td>pcs</td>
+												<td>15</td>
+												<td>White</td>
+												<td>01</td>
+												<td>1000</td>
+												<td>US$</td>
+												<td>0.01000</td>
+												<td>50.00</td>
+												<td></td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- CONTENT-WRAPPER SECTION END-->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12" style="text-align: center">
+					&copy; 2017 Cube System Viet Nam
+				</div>
+
+			</div>
+		</div>
+	</footer>
+	<!-- FOOTER SECTION END-->
+	<!-- JAVASCRIPT AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+	<!-- CORE JQUERY SCRIPTS -->
+	<script src="assets/js/jquery-1.11.1.js"></script>
+	<!-- BOOTSTRAP SCRIPTS  -->
+	<script src="assets/js/bootstrap.js"></script>
+	<!-- DATETIME PICKER-->
+	<script src="assets/jquery-ui/jquery-ui.js"></script>
+	<script>
+		$("#order_date").datepicker({
+			dateFormat: 'yy/mm/dd'
+		});
+		$("#apdate").datepicker({
+			dateFormat: 'yy/mm/dd'
+		});
+		$("#delivery_date").datepicker({
+			dateFormat: 'yy/mm/dd'
+		});
+		$("table#received_table > tbody > tr").click(function () {
+			window.location.href = "detail_recieved.html";
+		});
+	</script>
+	<script>
+		// init component
+		refreshInput();
+		// clear component value
+		function refreshInput() {
+			$("#order_no").val("");
+			$("#order_date").val("");
+			$("#customer_po").val("");
+			$("#salesman").val("");
+			$("#customer").val("");
+			$("#currency").val("");
+			$("#assistance").val("");
+			$("#delivery_to").val("");
+			$("#payment").val("");
+			$("#manager").val("");
+			$("#delivery_address").val("");
+			$("#apparel").val("");
+			$("#attention").val("");
+			$("#memo").val("");
+			$("#delivery_date").val("");
+			$('#bom_order').attr('checked', false);
+			$('#sales_zero').attr('checked', false);
+			$("#bank").val("");
+			$("#edit_user").val("");
+			$("#check_user").val("");
+			$("#create_user").val("");
+			$("#create_date").val("");
+			$("#edit_date").val("");
+			$("#check_date").val("");
+		}
+		//Choose product from list
+		$("table#listProduct > tbody > tr").click(function () {
+			var rows = $('#received_table tbody tr').length;
+			var item = "<tr>" +
+				"<th>" + (rows + 1) + "</th>" +
+				"<td>" + $(this).find("td:nth-child(4)").text() + "</td>" +
+				"<td>" + $(this).find("td:nth-child(5)").text() + "</td>" +
+				"<td>" + $(this).find("td:nth-child(6)").text() + "</td>" +
+				"<td>" + $(this).find("td:nth-child(8)").text() + "</td>" +
+				"<td>" + $(this).find("td:nth-child(9)").text() + "</td>" +
+				"<td>" + $(this).find("td:nth-child(10)").text() + "</td>" +
+				"<td>" + "3.000" + "</td>" +
+				"<td class='content-edit' contenteditable>" + "" + "</td>" +
+				"<td>" + $(this).find("td:nth-child(7)").text() + "</td>" +
+				"<td>" + $(this).find("td:nth-child(12)").text() + "</td>" +
+				"<td>" + $(this).find("td:nth-child(15)").text() + "</td>" +
+				"<td>" + "</td>" +
+				"<td>" + "</td>" +
+				"<td>" + "</td>" +
+				"<td>" + "</td>" +
+				"</tr>";
+			$("table#received_table tbody").append(item);
+			$('#productList').modal('hide');
+		});
+	</script>
+</body>
+
+</html>

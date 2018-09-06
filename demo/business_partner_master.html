@@ -1,0 +1,269 @@
+﻿<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+	<title>取引先マスタ画面</title>
+	<!-- BOOTSTRAP CORE STYLE  -->
+	<link href="assets/css/bootstrap.css" rel="stylesheet" />
+	<!-- DATETIME PICKER-->
+	<link href="assets/jquery-ui/jquery-ui.css" rel="stylesheet" />
+	<!--CUSTOM CSS-->
+	<link href="assets/css/customs/custom.css" rel="stylesheet" />
+	<!-- FONT AWESOME ICONS  -->
+	<link href="assets/css/font-awesome.css" rel="stylesheet" />
+	<!-- CUSTOM STYLE  -->
+	<link href="assets/css/style.css" rel="stylesheet" />
+	<!-- HTML5 Shiv and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+	<div class="navbar navbar-inverse set-radius-zero">
+		<div class="container">
+			<div class="navbar-header">
+				<a href="index.html">
+					<img src="assets/img/logo.png" style="margin: 10px 21px;" />
+				</a>
+			</div>
+			<button class="btn btn-warning" style="float:right; margin-top: 10px">Logout</button>
+			<input type="image" src="assets/img/jp.png" style="float:right; margin-top: 10px">
+			<input type="image" src="assets/img/vn.png" style="float:right; margin-top: 10px">
+			<input type="image" src="assets/img/us.png" style="float:right; margin-top: 10px">
+		</div>
+	</div>
+	<!-- LOGO HEADER END-->
+	<section class="menu-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="navbar-collapse collapse ">
+						<ul id="menu-top" class="nav navbar-nav navbar-left">
+							<li>
+								<a href="top.html">TOP</a>
+							</li>
+							<li>
+								<a href="received.html">受注入力</a>
+							</li>
+							<li>
+								<a href="stock.html">在庫入力</a>
+							</li>
+							<li>
+								<a href="order.html">発注入力</a>
+							</li>
+							<li>
+								<a href="sale.html">販売入力</a>
+							</li>
+							<li>
+								<a href="delivery_order.html">出荷指図書</a>
+							</li>
+							<li>
+								<a href="packing_instruction.html">梱包指示</a>
+							</li>
+							<li>
+								<a href="packing_list.html">P/L</a>
+							</li>
+							<li class="dropdown-submenu">
+								<a tabindex="-1" class="menu-top-active" data-toggle="dropdown">マスタ管理</a>
+								<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="background-color: #3D3D3D;">
+									<li>
+										<a tabindex="-1" href="product_master.html">商品マスタ</a>
+									</li>
+									<li>
+										<a tabindex="-1" href="business_partner_master.html">取引先マスタ</a>
+									</li>
+									<li>
+										<a tabindex="-1" href="user_master.html">ユーザマスタ</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!-- MENU SECTION END-->
+	<!-- MENU SECTION END-->
+	<div class="content-wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 header-style">
+					<h4 class="page-head-line">取引先マスタ</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<form class="form-horizontal">
+							<div class="col-sm-7">
+								<div class="form-group">
+									<div class="col-sm-12">
+										<label class="control-label col-sm-3 form-title" for="company_id">Company ID</label>
+										<div class="col-sm-9 form-inp">
+											<input type="text" class="form-control" id="company_id" value="10001">
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-12">
+										<label class="control-label col-sm-3 form-title" for="company_name">Company Name</label>
+										<div class="col-sm-9 form-inp">
+											<input type="text" class="form-control" id="company_name" value="SHIMAD SHOJI CO.,LTD.">
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-12">
+										<label class="control-label col-sm-3 form-title" for="address">Address</label>
+										<div class="col-sm-9 form-inp">
+											<input type="text" class="form-control" id="user_name" value="1-12, 3-CHOME, TANIMACHI, CHUO-KU, OSAKA, 540-0012, JAPAN">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-5">
+								<div class="form-group">
+									<div class="col-sm-12">
+										<label class="control-label col-sm-3 form-title" for="tel">TEL</label>
+										<div class="col-sm-9 form-inp">
+											<input type="text" class="form-control" id="tel" value="(06)6945-6151">
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-12">
+										<label class="control-label col-sm-3 form-title" for="fax">FAX</label>
+										<div class="col-sm-9 form-inp">
+											<input type="text" class="form-control" id="fax" value="(06)6943-0651">
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-12">
+										<label class="control-label col-sm-3 form-title" for="discount">Fixed discount</label>
+										<div class="col-sm-9 form-inp">
+											<input type="text" class="form-control" id="discount" value="10">
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<div class="col-sm-12 panel-button2">
+									<div class="pull-right">
+										<Button type="button" class="btn btn-success btn-custom">New</Button>
+										<Button type="button" class="btn btn-info btn-custom">Edit</Button>
+										<Button type="button" class="btn btn-primary btn-custom">Save</Button>
+										<Button type="button" class="btn btn-danger btn-custom">Delete</Button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12 header-style">
+					<div class="table-responsive">
+						<table class="table table-fixed table-bordered table-striped">
+							<thead>
+								<tr style="background-color:rgba(0,0,0,.075);">
+									<td></td>
+									<th>Company ID</th>
+									<th>Company Name</th>
+									<th style="min-width:300px !important;">Address</th>
+									<th>TEL</th>
+									<th>FAX</th>
+									<th>Fixed discount</th>
+									<th>Add user</th>
+									<th>Add Date</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>1</th>
+									<td>10001</td>
+									<td>SHIMAD SHOJI CO.,LTD.</td>
+									<td style="min-width:300px !important;">1-12, 3-CHOME, TANIMACHI, CHUO-KU, OSAKA, 540-0012, JAPAN</td>
+									<td>(06)6945-6151</td>
+									<td>(06)6943-0651</td>
+									<td>10</td>
+									<td>UI001</td>
+									<td>2017/01/01</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- CONTENT-WRAPPER SECTION END-->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12" style="text-align: center">
+					&copy; 2017 Cube System Viet Nam
+				</div>
+
+			</div>
+		</div>
+	</footer>
+	<!-- FOOTER SECTION END-->
+	<!-- JAVASCRIPT AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+	<!-- CORE JQUERY SCRIPTS -->
+	<script src="assets/js/jquery-1.11.1.js"></script>
+	<!-- BOOTSTRAP SCRIPTS  -->
+	<script src="assets/js/bootstrap.js"></script>
+	<!-- DATETIME PICKER-->
+	<script src="assets/jquery-ui/jquery-ui.js"></script>
+	<script>
+		$("#create_date").datepicker({
+			dateFormat: 'yy/mm/dd'
+		});
+		$("#sail_on").datepicker({
+			dateFormat: 'yy/mm/dd'
+		});
+		// $("div.table-responsive > table > tbody > tr").click(function () {
+		//     window.location.href = "detail_recieved.html";
+		// });
+	</script>
+	<script>
+		var historyClick = [];
+
+		function update(line, objButton) {
+			var idx = historyClick.indexOf(line);
+			if (idx !== -1) {
+				$('#stock tbody tr:nth-child(' + line + ') td').each(function () {
+					if ($(this).index() == $('#stock tbody tr:nth-child(' + line + ') td:last-child').index())
+						return;
+					$(this).attr("contenteditable", false);
+				});
+				$(objButton).html("修正");
+				historyClick.splice(idx, 1);
+				return;
+			}
+			$('#stock tbody tr:nth-child(' + line + ') td').each(function () {
+				if ($(this).index() == $('#stock tbody tr:nth-child(' + line + ') td:last-child').index())
+					return;
+				$(this).attr("contenteditable", true);
+			});
+			$(objButton).html("Cancel");
+			historyClick.push(line);
+		}
+	</script>
+</body>
+
+</html>

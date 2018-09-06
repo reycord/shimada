@@ -1,0 +1,546 @@
+﻿<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+	<title>商品マスタ画面</title>
+	<!-- BOOTSTRAP CORE STYLE  -->
+	<link href="assets/css/bootstrap.css" rel="stylesheet" />
+	<!-- DATETIME PICKER-->
+	<link href="assets/jquery-ui/jquery-ui.css" rel="stylesheet" />
+	<!--CUSTOM CSS-->
+	<link href="assets/css/customs/custom.css" rel="stylesheet" />
+	<!-- FONT AWESOME ICONS  -->
+	<link href="assets/css/font-awesome.css" rel="stylesheet" />
+	<!-- CUSTOM STYLE  -->
+	<link href="assets/css/style.css" rel="stylesheet" />
+	<!-- HTML5 Shiv and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+	<div class="navbar navbar-inverse set-radius-zero">
+		<div class="container">
+			<div class="navbar-header">
+				<a href="index.html">
+					<img src="assets/img/logo.png" style="margin: 10px 21px;" />
+				</a>
+			</div>
+			<button class="btn btn-warning" style="float:right; margin-top: 10px">Logout</button>
+			<input type="image" src="assets/img/jp.png" style="float:right; margin-top: 10px">
+			<input type="image" src="assets/img/vn.png" style="float:right; margin-top: 10px">
+			<input type="image" src="assets/img/us.png" style="float:right; margin-top: 10px">
+		</div>
+	</div>
+	<!-- LOGO HEADER END-->
+	<section class="menu-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="navbar-collapse collapse ">
+						<ul id="menu-top" class="nav navbar-nav navbar-left">
+							<li>
+								<a href="top.html">TOP</a>
+							</li>
+							<li>
+								<a href="received.html">受注入力</a>
+							</li>
+							<li>
+								<a href="stock.html">在庫入力</a>
+							</li>
+							<li>
+								<a href="order.html">発注入力</a>
+							</li>
+							<li>
+								<a href="sale.html">販売入力</a>
+							</li>
+							<li>
+								<a href="delivery_order.html">出荷指図書</a>
+							</li>
+							<li>
+								<a href="packing_instruction.html">梱包指示</a>
+							</li>
+							<li>
+								<a href="packing_list.html">P/L</a>
+							</li>
+							<li class="dropdown-submenu">
+								<a class="menu-top-active" tabindex="-1" href="#" data-toggle="dropdown">マスタ管理</a>
+								<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="background-color: #3D3D3D;">
+									<li>
+										<a tabindex="-1" href="product_master.html">商品マスタ</a>
+									</li>
+									<li>
+										<a tabindex="-1" href="business_partner_master.html">取引先マスタ</a>
+									</li>
+									<li>
+										<a tabindex="-1" href="user_master.html">ユーザマスタ</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!-- MENU SECTION END-->
+	<div class="content-wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 header-style">
+					<h4 class="page-head-line">商品マスタ</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<form class="form-horizontal">
+							<div class="form-group">
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="salesman">Salesman</label>
+									<div class="col-sm-8 form-inp">
+										<input type="text" class="form-control" id="salesman" value="Kaneda">
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="customer">Customer</label>
+									<div class="col-sm-8 form-inp">
+										<input type="text" class="form-control" id="customer" value="Tokyo1">
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="apparel">Apparel</label>
+									<div class="col-sm-8 form-inp">
+										<input type="text" class="form-control" id="apparel" value="Mizuno">
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="vendor">Vendor</label>
+									<div class="col-sm-8 form-inp">
+										<input type="text" class="form-control" id="vendor" value="Four seasons">
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="item_code">Item code</label>
+									<div class="col-sm-8 form-inp">
+										<input type="text" class="form-control" id="item_code" value="VNBS001">
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="item_name">Item name</label>
+									<div class="col-sm-8 form-inp">
+										<input type="text" class="form-control" id="item_name" value="Polyester button">
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="composition">Composition</label>
+									<div class="col-sm-8 form-inp">
+										<input type="text" class="form-control" id="composition" value="Polyester">
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="vender_parts">Vender Parts</label>
+									<div class="col-sm-8 form-inp">
+										<input type="text" class="form-control" id="vender_parts" value="FS9128">
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="unit">Unit</label>
+									<div class="col-sm-8 form-inp">
+										<input type="text" class="form-control" id="unit" value="pcs">
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="size_unit">Size unit</label>
+									<div class="col-sm-8 form-inp">
+										<input type="text" class="form-control" id="size_unit" value="mm">
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="size">Size</label>
+									<div class="col-sm-8 form-inp">
+										<input type="text" class="form-control" id="size" value="10">
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="moq">MOQ</label>
+									<div class="col-sm-8 form-inp">
+										<input type="text" class="form-control" id="moq" value="10,000">
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="currency">Currency</label>
+									<div class="col-sm-8 form-inp">
+										<select class="form-control" id="currency">
+											<option>USD</option>
+											<option>VND</option>
+											<option>JPY</option>
+											<option>EUR</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="net_price_us">NETpriceUS$</label>
+									<div class="col-sm-8 form-inp">
+										<input type="text" class="form-control" id="net_price_us" value="0.015000" style="padding-right: 0px;">
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="net_price_vnd">NETpriceVND</label>
+									<div class="col-sm-8 form-inp">
+										<input type="text" class="form-control" id="net_price_vnd" value="340.50000">
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="net_price_jp">NETpriceJP￥</label>
+									<div class="col-sm-8 form-inp">
+										<input type="email" class="form-control" id="net_price_jp" value="">
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-3">
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="sell_price_us">SellpriceUS$</label>
+									<div class="col-sm-8 form-inp">
+										<input type="text" class="form-control" id="sell_price_us" value="0.02000" style="padding-right: 0px;">
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="sell_price_vnd">SellpriceVND</label>
+									<div class="col-sm-8 form-inp">
+										<input type="text" class="form-control" id="sell_price_vnd" value="454.00000">
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="sell_price_jp">SellpriceJP￥</label>
+									<div class="col-sm-8 form-inp">
+										<input type="email" class="form-control" id="sell_price_jp" value="">
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="lot_quantity">Lot quantity</label>
+									<div class="col-sm-8 form-inp">
+										<input type="text" class="form-control" id="lot_quantity" value="144">
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="color">Color</label>
+									<div class="col-sm-8 form-inp">
+										<input type="text" class="form-control" id="color" value="01">
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<label class="control-label col-sm-4 form-title" for="vender_color">Vender color</label>
+									<div class="col-sm-8 form-inp">
+										<input type="text" class="form-control" id="vender_color" value="white">
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12 panel-button2">
+									<div class="pull-right">
+										<Button type="button" class="btn btn-primary btn-custom">Search</Button>
+										<Button type="button" class="btn btn-success" style="width: 163px;">Excel UPLOAD</Button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12 header-style">
+					<div class="table-responsive">
+						<table class="table table-fixed table-bordered table-striped">
+							<thead>
+								<tr style="background-color:rgba(0,0,0,.075);">
+									<td></td>
+									<th>Sales man</th>
+									<th>Customer</th>
+									<th>Apparel</th>
+									<th>Vender</th>
+									<th>Item code</th>
+									<th>Item name</th>
+									<th>Composition</th>
+									<th>Vender Parts</th>
+									<th>Unit</th>
+									<th>Size unit</th>
+									<th>Size</th>
+									<th>MOQ</th>
+									<th>Currency</th>
+									<th>NET price　US$</th>
+									<th>NET price　VND</th>
+									<th>NET price　JP￥</th>
+									<th>Sell Price US$</th>
+									<th>Sell Price VND</th>
+									<th>Sell Price　JP￥</th>
+									<th>Lot quantity</th>
+									<th>Color</th>
+									<th>Vender color</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>1</th>
+									<td>Kaneda</td>
+									<td>Tokyo1</td>
+									<td>Mizuno</td>
+									<td>Four seasons</td>
+									<td>VNBS001</td>
+									<td>Polyester button</td>
+									<td>Polyester</td>
+									<td>FS9128</td>
+									<td>pcs</td>
+									<td>mm</td>
+									<td>10</td>
+									<td>10,000</td>
+									<td>US$</td>
+									<td>0.015000</td>
+									<td>340.50000</td>
+									<td></td>
+									<td>0.02000</td>
+									<td>454.00000</td>
+									<td></td>
+									<td>144</td>
+									<td>01</td>
+									<td>White</td>
+								</tr>
+								<tr>
+									<th>2</th>
+									<td>Kaneda</td>
+									<td>Tokyo1</td>
+									<td>Mizuno</td>
+									<td>Four seasons</td>
+									<td>VNBS001</td>
+									<td>Polyester button</td>
+									<td>Polyester</td>
+									<td>FS9128</td>
+									<td>pcs</td>
+									<td>mm</td>
+									<td>15</td>
+									<td>8,000</td>
+									<td>VND</td>
+									<td>0.017000</td>
+									<td>385.90000</td>
+									<td></td>
+									<td>0.02200</td>
+									<td>499.40000</td>
+									<td></td>
+									<td>144</td>
+									<td>09</td>
+									<td>Black</td>
+								</tr>
+								<tr>
+									<th>3</th>
+									<td>Kaneda</td>
+									<td>Tokyo1</td>
+									<td>Mizuno</td>
+									<td>Four seasons</td>
+									<td>VNBS001</td>
+									<td>Polyester button</td>
+									<td>Polyester</td>
+									<td>FS9128</td>
+									<td>pcs</td>
+									<td>mm</td>
+									<td>18</td>
+									<td>7,000</td>
+									<td>JP￥</td>
+									<td>0.019</td>
+									<td>431.30000</td>
+									<td></td>
+									<td>0.024</td>
+									<td>544.80000</td>
+									<td></td>
+									<td>144</td>
+									<td>03</td>
+									<td>Gray</td>
+								</tr>
+								<tr>
+									<th>4</th>
+									<td>Kaneda</td>
+									<td>Tokyo1</td>
+									<td>Mizuno</td>
+									<td>Four seasons</td>
+									<td>VNBS001</td>
+									<td>Polyester button</td>
+									<td>Polyester</td>
+									<td>FS9128</td>
+									<td>pcs</td>
+									<td>mm</td>
+									<td>10</td>
+									<td>10,000</td>
+									<td>US$</td>
+									<td>0.015000</td>
+									<td>340.50000</td>
+									<td></td>
+									<td>0.02000</td>
+									<td>454.00000</td>
+									<td></td>
+									<td>144</td>
+									<td>01</td>
+									<td>White</td>
+								</tr>
+								<tr>
+									<th>5</th>
+									<td>Kaneda</td>
+									<td>Tokyo1</td>
+									<td>Mizuno</td>
+									<td>Four seasons</td>
+									<td>VNBS001</td>
+									<td>Polyester button</td>
+									<td>Polyester</td>
+									<td>FS9128</td>
+									<td>pcs</td>
+									<td>mm</td>
+									<td>10</td>
+									<td>10,000</td>
+									<td>US$</td>
+									<td>0.015000</td>
+									<td>340.50000</td>
+									<td></td>
+									<td>0.02000</td>
+									<td>454.00000</td>
+									<td></td>
+									<td>144</td>
+									<td>01</td>
+									<td>White</td>
+								</tr>
+								<tr>
+									<th>6</th>
+									<td>Kaneda</td>
+									<td>Tokyo1</td>
+									<td>Mizuno</td>
+									<td>Four seasons</td>
+									<td>VNBS001</td>
+									<td>Polyester button</td>
+									<td>Polyester</td>
+									<td>FS9128</td>
+									<td>pcs</td>
+									<td>mm</td>
+									<td>10</td>
+									<td>10,000</td>
+									<td>US$</td>
+									<td>0.015000</td>
+									<td>340.50000</td>
+									<td></td>
+									<td>0.02000</td>
+									<td>454.00000</td>
+									<td></td>
+									<td>144</td>
+									<td>01</td>
+									<td>White</td>
+								</tr>
+								<tr>
+									<th>7</th>
+									<td>Kaneda</td>
+									<td>Tokyo1</td>
+									<td>Mizuno</td>
+									<td>Four seasons</td>
+									<td>VNBS001</td>
+									<td>Polyester button</td>
+									<td>Polyester</td>
+									<td>FS9128</td>
+									<td>pcs</td>
+									<td>mm</td>
+									<td>10</td>
+									<td>10,000</td>
+									<td>US$</td>
+									<td>0.015000</td>
+									<td>340.50000</td>
+									<td></td>
+									<td>0.02000</td>
+									<td>454.00000</td>
+									<td></td>
+									<td>144</td>
+									<td>01</td>
+									<td>White</td>
+								</tr>
+								<tr>
+									<th>8</th>
+									<td>Kaneda</td>
+									<td>Tokyo1</td>
+									<td>Mizuno</td>
+									<td>Four seasons</td>
+									<td>VNBS001</td>
+									<td>Polyester button</td>
+									<td>Polyester</td>
+									<td>FS9128</td>
+									<td>pcs</td>
+									<td>mm</td>
+									<td>10</td>
+									<td>10,000</td>
+									<td>US$</td>
+									<td>0.015000</td>
+									<td>340.50000</td>
+									<td></td>
+									<td>0.02000</td>
+									<td>454.00000</td>
+									<td></td>
+									<td>144</td>
+									<td>01</td>
+									<td>White</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- CONTENT-WRAPPER SECTION END-->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12" style="text-align: center">
+					&copy; 2017 Cube System Viet Nam
+				</div>
+
+			</div>
+		</div>
+	</footer>
+	<!-- FOOTER SECTION END-->
+	<!-- JAVASCRIPT AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+	<!-- CORE JQUERY SCRIPTS -->
+	<script src="assets/js/jquery-1.11.1.js"></script>
+	<!-- BOOTSTRAP SCRIPTS  -->
+	<script src="assets/js/bootstrap.js"></script>
+	<!-- DATETIME PICKER-->
+	<script src="assets/jquery-ui/jquery-ui.js"></script>
+	<script>
+		$("#order_date").datepicker({
+			dateFormat: 'yy/mm/dd'
+		});
+		$("#apdate").datepicker({
+			dateFormat: 'yy/mm/dd'
+		});
+		$("#delivery_date").datepicker({
+			dateFormat: 'yy/mm/dd'
+		});
+		// $("div.table-responsive > table > tbody > tr").click(function () {
+		//     window.location.href = "detail_recieved.html";
+		// });
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+{
+    "name": "shimada_shoji",
+    "version": "1.0.0",
+    "description": "What is CodeIgniter\r ###################",
+    "main": "gulpfile.js",
+    "dependencies": {
+        "browser-sync": "^2.21.0",
+        "gulp-autoprefixer": "^4.0.0",
+        "gulp-cli": "^2.0.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-rename": "^1.2.2",
+        "gulp-ruby-sass": "^2.1.1",
+        "gulp-sass": "^3.1.0",
+        "gulp-uglify": "^3.0.0"
+    },
+    "devDependencies": {
+        "gulp": "^3.9.1"
+    },
+    "scripts": {
+        "dev": "gulp",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC"
+}

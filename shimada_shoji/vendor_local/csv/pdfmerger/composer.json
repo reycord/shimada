@@ -1,0 +1,8 @@
+{
+    "name": "csv/pdfmerger",
+    "autoload":{
+    	"psr-4":{
+    		"Csv\\PDFMerger\\": "src"
+    	}
+    }
+}

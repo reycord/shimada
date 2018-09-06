@@ -1,0 +1,341 @@
+﻿<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+	<title>Packing List</title>
+	<!-- BOOTSTRAP CORE STYLE  -->
+	<link href="assets/css/bootstrap.css" rel="stylesheet" />
+	<!-- DATETIME PICKER-->
+	<link href="assets/jquery-ui/jquery-ui.css" rel="stylesheet" />
+	<!--CUSTOM CSS-->
+	<link href="assets/css/customs/custom.css" rel="stylesheet" />
+	<!-- FONT AWESOME ICONS  -->
+	<link href="assets/css/font-awesome.css" rel="stylesheet" />
+	<!-- CUSTOM STYLE  -->
+	<link href="assets/css/style.css" rel="stylesheet" />
+	<!-- HTML5 Shiv and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+	<div class="navbar navbar-inverse set-radius-zero">
+		<div class="container">
+			<div class="navbar-header">
+				<a href="index.html">
+					<img src="assets/img/logo.png" style="margin: 10px 21px;" />
+				</a>
+			</div>
+			<button class="btn btn-warning" style="float:right; margin-top: 10px">Logout</button>
+			<input type="image" src="assets/img/jp.png" style="float:right; margin-top: 10px">
+			<input type="image" src="assets/img/vn.png" style="float:right; margin-top: 10px">
+			<input type="image" src="assets/img/us.png" style="float:right; margin-top: 10px">
+		</div>
+	</div>
+	<!-- LOGO HEADER END-->
+	<section class="menu-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="navbar-collapse collapse ">
+						<ul id="menu-top" class="nav navbar-nav navbar-left">
+							<li>
+								<a href="top.html">TOP</a>
+							</li>
+							<li>
+								<a href="received.html">受注入力</a>
+							</li>
+							<li>
+								<a href="stock.html">在庫入力</a>
+							</li>
+							<li>
+								<a href="order.html">発注入力</a>
+							</li>
+							<li>
+								<a href="sale.html">販売入力</a>
+							</li>
+							<li>
+								<a href="delivery_order.html">出荷指図書</a>
+							</li>
+							<li>
+								<a href="packing_instruction.html">梱包指示</a>
+							</li>
+							<li>
+								<a class="menu-top-active" href="packing_list.html">P/L</a>
+							</li>
+							<li class="dropdown-submenu">
+								<a tabindex="-1" href="#" data-toggle="dropdown">マスタ管理</a>
+								<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="background-color: #3D3D3D;">
+									<li>
+										<a tabindex="-1" href="product_master.html">商品マスタ</a>
+									</li>
+									<li>
+										<a tabindex="-1" href="business_partner_master.html">取引先マスタ</a>
+									</li>
+									<li>
+										<a tabindex="-1" href="user_master.html">ユーザマスタ</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!-- MENU SECTION END-->
+	<div class="content-wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 header-style">
+					<h4 class="page-head-line">Packing List</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<form class="form-horizontal">
+							<div class="form-group">
+								<div class="col-sm-6">
+									<label class="control-label col-sm-2 form-title" for="seller_company">Shipper/Seller</label>
+									<div class="col-sm-10 child-input">
+										<input type="text" class="form-control" id="seller_company" value="" placeholder="Company Name">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<label class="control-label col-sm-2 form-title" for="sold_company">Sold to</label>
+									<div class="col-sm-10 child-input">
+										<input type="text" class="form-control" id="sold_company" value="" placeholder="Company Name">
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-6">
+									<label class="control-label col-sm-2 form-title" for="seller_address"></label>
+									<div class="col-sm-10 child-input">
+										<input type="text" class="form-control" id="seller_address" value="" placeholder="Address">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<label class="control-label col-sm-2 form-title" for="sold_address"></label>
+									<div class="col-sm-10 child-input">
+										<input type="text" class="form-control" id="sold_address" value="" placeholder="Address">
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-6">
+									<label class="control-label col-sm-2 form-title"></label>
+									<div class="col-sm-10 child-input">
+										<div class="col-sm-6 nopadding-left">
+											<input type="text" class="form-control" id="seller_phone" value="" placeholder="Phone">
+										</div>
+										<div class="col-sm-6 nopadding">
+											<input type="text" class="form-control" id="seller_fax" value="" placeholder="Fax">
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<label class="control-label col-sm-2 form-title"></label>
+									<div class="col-sm-10 child-input">
+										<div class="col-sm-6 nopadding-left">
+											<input type="text" class="form-control" id="seller_phone" value="" placeholder="Phone">
+										</div>
+										<div class="col-sm-6 nopadding">
+											<input type="text" class="form-control" id="seller_fax" value="" placeholder="Fax">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-6">
+									<label class="control-label col-sm-2 form-title" for="invoice_no">Invoice No</label>
+									<div class="col-sm-10 child-input">
+										<input type="text" class="form-control" id="invoice_no" value="" placeholder="Invoice No">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<label class="control-label col-sm-2 form-title" for="shipped_per">Shipped Per</label>
+									<div class="col-sm-10 child-input">
+										<input type="text" class="form-control" id="shipped_per" value="" placeholder="Shipped Per">
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-6">
+									<label class="control-label col-sm-2 form-title" for="create_date">Date</label>
+									<div class="col-sm-10 child-input">
+										<div class="col-sm-6 nopadding-left">
+											<input type="text" class="form-control" id="create_date" value="" placeholder="YYYY/MM/DD">
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<label class="control-label col-sm-2 form-title" for="sail_on">Sail on</label>
+									<div class="col-sm-10 child-input">
+										<div class="col-sm-6 nopadding-left">
+											<input type="text" class="form-control" id="sail_on" value="" placeholder="YYYY/MM/DD">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-6">
+									<label class="control-label col-sm-2 form-title" for="shipped_from">Shipped from</label>
+									<div class="col-sm-10 child-input">
+										<input type="text" class="form-control" id="shipped_from" value="" placeholder="Shipped from">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<label class="control-label col-sm-2 form-title" for="shipped_to">Shipped To</label>
+									<div class="col-sm-10 child-input">
+										<input type="text" class="form-control" id="shipped_to" value="" placeholder="Shipped to">
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12 panel-button">
+									<div class="pull-right">
+										<a href="packing_list_2.html" class="btn btn-info btn-custom">検索</a>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12 header-style">
+					<div class="table-responsive">
+						<table class="table table-fixed table-bordered table-striped">
+							<thead>
+								<tr style="background-color:rgba(0,0,0,.075);">
+									<th>Item Code</th>
+									<th>Item Name</th>
+									<th>Color</th>
+									<th>Size</th>
+									<th>Net WT</th>
+									<th>Gross WT</th>
+									<th>M&sup3;</th>
+									<th>Quantity</th>
+									<th>Unit</th>
+								</tr>
+							</thead>
+							<tbody>
+
+							</tbody>
+						</table>
+					</div>
+					<div class="row" style="margin-top: 25px">
+						<div class="col-md-3">
+						</div>
+						<div class="col-md-3">
+							<table class="table table-bordered" style="height: auto;">
+								<thead>
+									<tr>
+										<th>Total</th>
+										<th>Unit</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td style="line-height:40px">&nbsp;</td>
+										<td style="line-height:40px">&nbsp;</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="col-md-3">
+							<table class="table" style="border:1px solid #ddd; ">
+								<tbody>
+									<tr>
+										<td>NET</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>GROSS</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>M&sup3;</td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="col-md-3">
+							<table class="table" style="border:1px solid #ddd;">
+								<tbody>
+									<tr>
+										<td>Carton</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Bale</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Roll</td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-12 panel-button" style="padding-top:25px">
+							<div class="pull-right">
+								<Button type="button" class="btn btn-info btn-custom">参照</Button>
+								<button type="button" class="btn btn-success btn-custom">確定</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- CONTENT-WRAPPER SECTION END-->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12" style="text-align: center">
+					&copy; 2017 Cube System Viet Nam
+				</div>
+
+			</div>
+		</div>
+	</footer>
+	<!-- FOOTER SECTION END-->
+	<!-- JAVASCRIPT AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+	<!-- CORE JQUERY SCRIPTS -->
+	<script src="assets/js/jquery-1.11.1.js"></script>
+	<!-- BOOTSTRAP SCRIPTS  -->
+	<script src="assets/js/bootstrap.js"></script>
+	<!-- DATETIME PICKER-->
+	<script src="assets/jquery-ui/jquery-ui.js"></script>
+	<script>
+		$("#create_date").datepicker({
+			dateFormat: 'yy/mm/dd'
+		});
+		$("#sail_on").datepicker({
+			dateFormat: 'yy/mm/dd'
+		});
+		// $("div.table-responsive > table > tbody > tr").click(function () {
+		//     window.location.href = "detail_recieved.html";
+		// });
+	</script>
+</body>
+
+</html>

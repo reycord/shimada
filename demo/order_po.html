@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <!--[if IE]>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<![endif]-->
+  <title>PO出力</title>
+  <!-- BOOTSTRAP CORE STYLE  -->
+  <link href="assets/css/bootstrap.css" rel="stylesheet" />
+  <!-- FONT AWESOME ICONS  -->
+  <link href="assets/css/font-awesome.css" rel="stylesheet" />
+  <!-- CUSTOM STYLE  -->
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <!-- DATETIME PICKER-->
+  <link href="assets/jquery-ui/jquery-ui.css" rel="stylesheet" />
+  <!--CUSTOM CSS-->
+  <link href="assets/css/customs/custom.css" rel="stylesheet" />
+  <!-- HTML5 Shiv and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+  <style>
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: #FAFAFA;
+      font: 9pt "Tahoma";
+    }
+
+    * {
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      padding: 5mm;
+      margin: 5mm auto;
+      background: white;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .address-company-name {
+      font: 11pt "Tahoma";
+    }
+
+    .address {
+      font-size: 9pt;
+    }
+
+    th {
+      text-align: center;
+      vertical-align: middle !important;
+    }
+
+    td {
+      vertical-align: text-top
+    }
+
+    th,
+    td {
+      line-height: 14pt
+    }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    @media print {
+      html,
+      body {
+        width: 210mm;
+        height: 297mm;
+      }
+      .page {
+        margin: 0;
+        border: initial;
+        border-radius: initial;
+        width: initial;
+        min-height: initial;
+        box-shadow: initial;
+        background: initial;
+        page-break-after: always;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="book">
+    <div class="page">
+      <div class="row" style="margin-top: 10mm">
+        <div class="col-sm-8">
+          <span class="address-company-name">SHIMADA SHOJI (VIETNAM) CO.,LTD</span>
+          <p class="address">28 VSIP, Street 3, Vietnam-Singapore Industrial Park
+            <br/>Thuan An District, Binh Duong Province, Vietnam
+            <br/>Tel:(84) 650.3768987
+            <span>Fax: (84)650.3768986</span>
+          </p>
+        </div>
+        <div class="col-sm-4"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 col-sm-offset-8">
+          DATE: 10-Apr-17
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12" style="margin: 10px 0px">
+          <h3 class="text-center">
+            <u>PURCHASE ORDER</u>
+          </h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3 col-sm-offset-9">
+          PO No: SVPO-DMBK-218/17
+        </div>
+      </div>
+      <div class="row" style="margin-top: 5mm">
+        <div class="col-sm-9">
+          <table>
+            <tr>
+              <td style="padding-right: 15px; vertical-align: text-top;">TO:</td>
+              <td>
+                <span class="address-company-name">VIETNAM PAIHO LIMITE</span>
+                <p class="address">LO 30-32-34-36 NO 3. ROAD TAN TAO INDUSTRIAL PARK
+                  <br/>BINH TAN DIST, HCM CITY, VIET NAM
+                  <br/>Tel:84-8-37.540.103
+                  <br/>Fax:84-8-37.549.109
+                </p>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-sm-3 text-center">
+          (SXXK New)
+        </div>
+      </div>
+      <b>Commodity and Quality:</b>
+      <p></p>
+      <div class="row">
+        <div style="margin: 0 12mm;">
+          <table class="table table-bordered">
+            <tr>
+              <th>No</th>
+              <th>Items and Description</th>
+              <th colspan="2">Quantity
+                <br/>(Pcs)</th>
+              <th>Unit Price
+                <br/>(USD)</th>
+              <th>Amount
+                <br/>(USD)</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>(VNBS0001)Polyester button
+                <br/>SIZE:15MM
+                <br/>COLOR:WHITE</td>
+              <td class="text-center">
+                <br/>7000</td>
+              <td class="text-center">
+                <br/>M</td>
+              <td class="text-center">
+                <br/>0.100</td>
+              <td class="text-center">
+                <br/>700.00</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Total</td>
+              <td class="text-center">7000</td>
+              <td class="text-center">M</td>
+              <td class="text-center"></td>
+              <td class="text-center">700.00</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <p></p>
+      <table>
+        <tr>
+          <td style="width: 40mm">TRANPOTATION:</td>
+          <td>CPT SHIMADA SHOJI (VIETNAM) CO.,LTD&nbsp;&nbsp;&nbsp;FACTORY (BINHDUONG)</td>
+        </tr>
+        <tr>
+          <td>QUANTITY:</td>
+          <td>3% more or less in quantity aceptable for each items</td>
+        </tr>
+        <tr>
+          <td>FREIGHT:</td>
+          <td>SELLER</td>
+        </tr>
+        <tr>
+          <td>HOPE DELIVERY:</td>
+          <td>15-Apr-17</td>
+        </tr>
+        <tr>
+          <td>PAYMENT TERM:</td>
+          <td>T/T</td>
+        </tr>
+        <tr>
+          <td>SHIPPING MARK:</td>
+          <td>SVPO-DMBK-218/17
+            <br> PV007075, 7074, 7060, 7059, 7058, 7055, 7054</td>
+        </tr>
+        <tr>
+          <td>INSURANCE:</td>
+          <td>SELLER</td>
+        </tr>
+        <tr>
+          <td>DESTINATION:</td>
+          <td>SHIMADA SHOJI(VIETNAM) CO.,LTD</td>
+        </tr>
+        <tr>
+          <td>CONSIGNEE:</td>
+          <td>SHIMADA SHOJI(VIETNAM) CO.,LTD
+            <br> No.28 VSIP Street 3, Vietnam-Singapore Industrial Park,
+            <br> Thuan An District, Binh Duong Province, Vietnam
+            <br> Tel: (84) 0650.76987</td>
+        </tr>
+      </table>
+      <div class="row">
+        <div class="col-sm-6">
+          (SELLER)
+          <br> VIETNAM PAIHO LIMITED
+        </div>
+        <div class="col-sm-6">
+          (BUYER)
+          <br> SHIMADA SHOJI (VIETNAM) CO.,LTD
+        </div>
+      </div>
+      <div class="row" style="margin-top: 50px">
+        <div class="col-sm-12">
+          <div style="width: 30%; float:left; border-bottom: solid 1px #CDCDCD; margin-right: 10%"></div>
+          <div style="width: 30%; float:left; border-bottom: solid 1px #CDCDCD; margin-right: 10%;margin-left: 10%"></div>
+        </div>
+        <div class="col-sm-12">
+          <div style="width: 30%; float:left; margin-right: 10%; height:10px"> </div>
+          <div style="width: 30%; float:left;margin-right: 10%; margin-left: 10%"> FUKADA KEISUKE</div>
+        </div>
+      </div>
+    </div>
+
+</body>
+
+</html>
